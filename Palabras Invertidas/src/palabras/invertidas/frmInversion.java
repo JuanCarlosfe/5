@@ -24,7 +24,7 @@ public class frmInversion extends javax.swing.JFrame {
 
         jLabel2.setText("Texto Invertido:");
 
-        jLabel3.setFont(new java.awt.Font("Sylfaen", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Sylfaen", 0, 36)); // NOI18N
         jLabel3.setText("Inversion");
 
         lblInvertir.setText("...");
@@ -44,27 +44,27 @@ public class frmInversion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblInvertir)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1)
-                            .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel3)))
                 .addContainerGap(106, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnInvertir)
-                .addGap(27, 27, 27))
+                .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel3)
                 .addGap(29, 29, 29)
+                .addComponent(jLabel3)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtTexto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -72,21 +72,22 @@ public class frmInversion extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(lblInvertir)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnInvertir)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInvertirActionPerformed
-        String Cadena = (txtTexto.getText());
-        String CadenaInvertida = null;
-        for (int x = Cadena.length() - 1; x >= 0; x--) {
+        String Text = (txtTexto.getText());
+        String TextInvertida = null;
+        for (int x = Text.length() - 1; x >= 0; x--) {
 
-            CadenaInvertida = CadenaInvertida + Cadena.charAt(x);
-            lblInvertir.setText(CadenaInvertida);
+            TextInvertida = TextInvertida + Text.charAt(x);
+            lblInvertir.setText(TextInvertida);
+        
         }
     }//GEN-LAST:event_btnInvertirActionPerformed
 
